@@ -1,3 +1,5 @@
+const pkg = require('./package.json');
+
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -8,13 +10,7 @@ module.exports = function(grunt) {
                 src: [],
                 dest: 'bundle.js',
                 options: {
-                    require: [
-                        'uniq',
-                        'jquery',
-                        'p-queue',
-                        'delay',
-                        'mqtt-smarthome-connect'
-                    ]
+                    require: Object.keys(pkg.dependencies)
                 }
             }
         },
