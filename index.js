@@ -1,5 +1,8 @@
-const unique = require('uniq');
 const $ = require('jquery');
+require('popper.js');
+require('bootstrap');
+
+const unique = require('uniq');
 const {default: PQueue} = require('p-queue');
 const delay = require('delay');
 const MqttSmarthome = require('mqtt-smarthome-connect');

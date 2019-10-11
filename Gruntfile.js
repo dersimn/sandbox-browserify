@@ -15,6 +15,15 @@ module.exports = function(grunt) {
             }
         },
 
+        concat: {
+            css: {
+                src: [
+                    'node_modules/bootstrap/dist/css/bootstrap.css'
+                ],
+                dest: 'bundle.css'
+            }
+        },
+
         clean: {
             dist: [
                 'node_modules/',
@@ -24,7 +33,8 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('default', ['browserify']);
+    grunt.registerTask('default', ['browserify', 'concat']);
 };
