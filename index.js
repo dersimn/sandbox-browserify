@@ -1,6 +1,6 @@
 const unique = require('uniq');
 const $ = require('jquery');
-const PQueue = require('p-queue');
+const {default: PQueue} = require('p-queue');
 const delay = require('delay');
 const MqttSmarthome = require('mqtt-smarthome-connect');
 
@@ -24,12 +24,3 @@ const mqtt = new MqttSmarthome('ws://localhost:9001', { // works only with ws://
 mqtt.on('connect', () => {
     mqtt.publish('test/maintenance/online', true, {retain: true});
 });
-
-// Export for browser
-global.jQuery = $;
-global.$ = $;
-global.unique = unique;
-global.PQueue = PQueue;
-global.queue = queue;
-global.MqttSmarthome = MqttSmarthome;
-global.mqtt = mqtt;

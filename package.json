@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "delay": "^4.3.0",
+    "jquery": "^3.4.1",
+    "mqtt-smarthome-connect": "0.0.7",
+    "p-queue": "^6.1.1",
+    "uniq": "^1.0.1"
+  }
+}
